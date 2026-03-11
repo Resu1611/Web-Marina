@@ -162,6 +162,89 @@ const Hero = ({ onReserveClick }: { onReserveClick: (e: React.MouseEvent<HTMLAnc
   );
 };
 
+const ServicesSection = () => {
+  return (
+    <section id="servicios" className="bg-[#111111] py-24 px-6 md:px-16">
+      <FadeInUp>
+        <div className="text-center">
+          <h2 className="font-serif text-3xl md:text-5xl text-white">Nuestros Tratamientos</h2>
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto font-sans">
+            Especialistas en micropigmentación y realce natural.
+          </p>
+        </div>
+      </FadeInUp>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-7xl mx-auto">
+        {/* Tarjeta 1: Cejas */}
+        <FadeInUp delay={200}>
+          <div className="bg-[#1A1A1A] border border-white/5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:border-[#7A1B1B]/50 hover:shadow-2xl hover:shadow-[#7A1B1B]/10 overflow-hidden group">
+            <div className="aspect-video bg-[#222222] relative">
+              {/* TODO: Insertar imagen del servicio aquí */}
+            </div>
+            <h3 className="font-serif text-white text-xl md:text-2xl mt-6 px-6">Cejas (Brows)</h3>
+            <p className="font-sans text-gray-400 text-sm mt-3 px-6 pb-6">
+              Diseño personalizado pelo a pelo para enmarcar tu mirada con naturalidad absoluta.
+            </p>
+            <div className="border-t border-white/5 mx-6"></div>
+            <ul className="py-4 px-6 space-y-2">
+              <li className="flex items-start text-gray-300 text-sm">
+                <span className="text-[#7A1B1B] mr-2">•</span> Microblading & Shading
+              </li>
+              <li className="flex items-start text-gray-300 text-sm">
+                <span className="text-[#7A1B1B] mr-2">•</span> Diseño y Visagismo
+              </li>
+            </ul>
+          </div>
+        </FadeInUp>
+
+        {/* Tarjeta 2: Labios */}
+        <FadeInUp delay={400}>
+          <div className="bg-[#1A1A1A] border border-white/5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:border-[#7A1B1B]/50 hover:shadow-2xl hover:shadow-[#7A1B1B]/10 overflow-hidden group">
+            <div className="aspect-video bg-[#222222] relative">
+              {/* TODO: Insertar imagen del servicio aquí */}
+            </div>
+            <h3 className="font-serif text-white text-xl md:text-2xl mt-6 px-6">Labios (Lips)</h3>
+            <p className="font-sans text-gray-400 text-sm mt-3 px-6 pb-6">
+              Revitalización de color, neutralización y definición de contornos perdidos.
+            </p>
+            <div className="border-t border-white/5 mx-6"></div>
+            <ul className="py-4 px-6 space-y-2">
+              <li className="flex items-start text-gray-300 text-sm">
+                <span className="text-[#7A1B1B] mr-2">•</span> Acuarela Lips
+              </li>
+              <li className="flex items-start text-gray-300 text-sm">
+                <span className="text-[#7A1B1B] mr-2">•</span> Neutralización de Tono
+              </li>
+            </ul>
+          </div>
+        </FadeInUp>
+
+        {/* Tarjeta 3: Pestañas */}
+        <FadeInUp delay={600}>
+          <div className="bg-[#1A1A1A] border border-white/5 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:border-[#7A1B1B]/50 hover:shadow-2xl hover:shadow-[#7A1B1B]/10 overflow-hidden group">
+            <div className="aspect-video bg-[#222222] relative">
+              {/* TODO: Insertar imagen del servicio aquí */}
+            </div>
+            <h3 className="font-serif text-white text-xl md:text-2xl mt-6 px-6">Pestañas (Lashes)</h3>
+            <p className="font-sans text-gray-400 text-sm mt-3 px-6 pb-6">
+              Volumen y longitud para despertar tu mirada sin necesidad de rímel.
+            </p>
+            <div className="border-t border-white/5 mx-6"></div>
+            <ul className="py-4 px-6 space-y-2">
+              <li className="flex items-start text-gray-300 text-sm">
+                <span className="text-[#7A1B1B] mr-2">•</span> Lifting de Pestañas
+              </li>
+              <li className="flex items-start text-gray-300 text-sm">
+                <span className="text-[#7A1B1B] mr-2">•</span> Extensiones Clásicas y Volumen
+              </li>
+            </ul>
+          </div>
+        </FadeInUp>
+      </div>
+    </section>
+  );
+};
+
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -232,6 +315,9 @@ export default function App() {
 
       {/* Nuevo Hero Fullscreen Modulable */}
       <Hero onReserveClick={(e) => scrollToReserva(e as any)} />
+
+      {/* Sección Oscura de Servicios Premium */}
+      <ServicesSection />
 
       {/* Rediseño de la Barra de Autoridad - Inspirada en la imagen de referencia (Grid, Outline icons, White BG) */}
       <FadeInUp>
