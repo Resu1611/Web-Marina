@@ -202,13 +202,13 @@ export default function App() {
               <a href="#metodo" className="hover:text-[#7A1B1B] transition-colors relative group">El Método</a>
               <a href="#resultados" className="hover:text-[#7A1B1B] transition-colors relative group">Resultados</a>
               <button onClick={scrollToReserva} className="bg-[#7A1B1B] text-white px-7 py-2.5 rounded-full hover:bg-[#5A1414] transition-all shadow-md hover:shadow-lg flex items-center gap-2">
-                Reservar
+                Agendar Cita
               </button>
             </nav>
             
             <div className="flex items-center gap-2 md:hidden">
               <button onClick={scrollToReserva} className="bg-[#7A1B1B] text-white px-4 py-2 text-xs tracking-wide rounded-full font-medium transition-all shadow-md">
-                Reservar
+                Agendar Cita
               </button>
               <button className={`p-1.5 rounded-full transition-colors ${isScrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white'}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                 {mobileMenuOpen ? <X size={22}/> : <Menu size={22}/>}
