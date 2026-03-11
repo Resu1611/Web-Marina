@@ -119,8 +119,7 @@ const Hero = ({ onReserveClick }: { onReserveClick: (e: React.MouseEvent<HTMLAnc
       className="bg-[80%_top] md:bg-right bg-cover bg-no-repeat relative min-h-screen flex flex-col justify-end md:justify-center overflow-hidden"
       style={{ backgroundImage: "url('/images/hero-marina.webp')" }}
     >
-      {/* GRADIENTE DE PROTECCIÓN */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#111111] via-[#111111]/90 to-transparent md:bg-gradient-to-r md:from-[#111111] md:via-[#111111]/80 md:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#111111] via-[#111111]/90 to-[#111111]/0 md:bg-gradient-to-r md:from-[#111111] md:via-[#111111]/80 md:to-[#111111]/0 pointer-events-none"></div>
 
       {/* CAPA 3: Contenido Persuasivo */}
       <div className="relative z-10 w-full max-w-7xl mx-auto pb-12 md:pb-0 px-6 md:px-16 lg:px-20">
@@ -305,7 +304,7 @@ export default function App() {
           <FadeInUp delay={200} className="relative z-10">
             <div className="flex flex-col items-center text-center group cursor-default">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#7A1B1B] shadow-xl flex items-center justify-center mb-6 text-white text-2xl md:text-3xl font-serif transition-transform duration-500 group-hover:scale-110">2</div>
-              <h3 className="text-lg md:text-xl font-semibold mb-3">Diseño Arquitectónico</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-3">Diseño Facial</h3>
               <p className="text-gray-600 font-light text-sm leading-relaxed px-4">
                 Trazamos el tratamiento utilizando herramientas de mapeo de alta precisión. No avanzamos un milímetro sin que tú hayas aprobado el diseño previo frente al espejo.
               </p>
