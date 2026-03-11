@@ -122,8 +122,11 @@ const Hero = ({ onReserveClick }: { onReserveClick: (e: React.MouseEvent<HTMLAnc
         style={{ backgroundImage: "url('/images/hero-marina.webp')" }}
       ></div>
 
-      {/* GRADIENTE DE PROTECCIÓN (A prueba de balas) */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/80 to-transparent md:bg-gradient-to-r md:from-black md:via-black/80 md:to-transparent pointer-events-none"></div>
+      {/* OVERLAY MÓVIL (Fuerza bruta con CSS inline) */}
+      <div className="absolute inset-0 z-10 block md:hidden pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(17,17,17,1) 0%, rgba(17,17,17,0.85) 45%, rgba(17,17,17,0) 100%)' }}></div>
+      
+      {/* OVERLAY DESKTOP (Fuerza bruta con CSS inline) */}
+      <div className="absolute inset-0 z-10 hidden md:block pointer-events-none" style={{ background: 'linear-gradient(to right, rgba(17,17,17,1) 0%, rgba(17,17,17,0.8) 40%, rgba(17,17,17,0) 100%)' }}></div>
 
       {/* CAPA 3: Contenido Persuasivo */}
       <div className="relative z-20 w-full max-w-7xl mx-auto pb-12 md:pb-0 px-6 md:px-16 lg:px-20">
