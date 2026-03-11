@@ -164,7 +164,7 @@ const Hero = ({ onReserveClick }: { onReserveClick: (e: React.MouseEvent<HTMLAnc
 
 const ServicesSection = () => {
   return (
-    <section id="servicios" className="bg-[#111111] py-24 px-6 md:px-16">
+    <section id="servicios" className="hidden bg-[#111111] py-24 px-6 md:px-16">
       <FadeInUp>
         <div className="text-center">
           <h2 className="font-serif text-3xl md:text-5xl text-white">Nuestros Tratamientos</h2>
