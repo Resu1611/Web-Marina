@@ -115,14 +115,18 @@ const ResultadosCarousel = () => {
 
 const Hero = ({ onReserveClick }: { onReserveClick: (e: React.MouseEvent<HTMLAnchorElement>) => void }) => {
   return (
-    <section 
-      className="bg-[80%_top] md:bg-right bg-cover bg-no-repeat relative min-h-screen flex flex-col justify-end md:justify-center overflow-hidden"
-      style={{ backgroundImage: "url('/images/hero-marina.webp')" }}
-    >
-      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#111111] via-[#111111]/90 to-[#111111]/0 md:bg-gradient-to-r md:from-[#111111] md:via-[#111111]/80 md:to-[#111111]/0 pointer-events-none"></div>
+    <section className="relative z-0 min-h-screen flex flex-col justify-end md:justify-center overflow-hidden">
+      {/* CAPA 1: Imagen de Fondo Estricta */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-[80%_top] md:bg-right bg-cover bg-no-repeat -z-10"
+        style={{ backgroundImage: "url('/images/hero-marina.webp')" }}
+      ></div>
+
+      {/* GRADIENTE DE PROTECCIÓN (A prueba de balas) */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/80 to-transparent md:bg-gradient-to-r md:from-black md:via-black/80 md:to-transparent pointer-events-none"></div>
 
       {/* CAPA 3: Contenido Persuasivo */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto pb-12 md:pb-0 px-6 md:px-16 lg:px-20">
+      <div className="relative z-20 w-full max-w-7xl mx-auto pb-12 md:pb-0 px-6 md:px-16 lg:px-20">
         <FadeInUp delay={100}>
           <span className="text-gray-300 font-sans tracking-[0.2em] uppercase text-sm font-semibold mb-4 block">
             Especialistas en Brows, Lips, Eyes & Lashes
